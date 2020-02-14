@@ -1,0 +1,36 @@
+{
+    "bot": {
+        "options": {
+            "debug": true
+        },
+        "connection": {
+            "cluster": "aws",
+            "reconnect": true
+        },
+        "identity": {
+            "username": "",
+            "password": ""
+        },
+        "channels": [
+            ""
+        ]
+    },
+    "project_keys": {
+        "client_id": "",
+        "client_secret": "",
+        "user_id": ""
+    },
+    "development": {
+        "config_id": "development",
+        "port": 8080,
+        "database": "twitch-bot-db-dev",
+        "callback": ""
+
+    },
+    "production": {
+        "config_id": "production",
+        "port": 8080,
+        "database": "twitch-bot-db-dev",
+        "callback": ""
+    }
+}
