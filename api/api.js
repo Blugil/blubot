@@ -10,7 +10,7 @@ let callback = config.development.callback;
 function authToken() {
     axios.post(`https://id.twitch.tv/oauth2/token?client_id=${client_id}&client_secret=${client_secret}&grant_type=client_credentials`).then(function(response) {
 
-        console.log(response.data);
+        console.log(response.data.access_token);
         
     }).catch(function(error) {
         console.error(error);
@@ -27,7 +27,7 @@ function getSubscriptionsList(authToken) {
         }
     }).then(function(response) {
         console.log(response.data);
-        
+        //return response.data.access_token;
     }).catch(function(error) {
         console.error(error);
         
@@ -61,7 +61,7 @@ function subscriptionRequest(callback, mode, topic, lease_seconds) {
 }
 
 //subscription quest to new followers
-subscriptionRequest(callback, 'subscribe', `https://api.twitch.tv/helix/users/follows?first=1&to_id=${user_id}`, 100000);
+subscriptionRequest(callback + "followers", 'subscribe', `https://api.twitch.tv/helix/users/follows?first=1&to_id=${user_id}`, 100000);
 
 //subscription request to change in stream state
-subscriptionRequest(callback, 'subscribe', `https://api.twitch.tv/helix/streams?user_id=${user_id}`, 100000);
+subscriptionRequest(callback + "stream", 'subscribe', `https://api.twitch.tv/helix/streams?user_id=${user_id}`, 100000);
