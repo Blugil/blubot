@@ -12,7 +12,6 @@ followers.get('/', function(request, response) {
     else {
         response.sendStatus(404);
     }
-    console.log(url);
 })
 
 followers.post('/', function(request, response) {

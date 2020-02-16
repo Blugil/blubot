@@ -10,7 +10,6 @@ routes.use('/stream', stream)       // to support JSON-encoded bodies
 routes.get('/', function(request, response) {
     let url = request.query;
     response.send(url['hub.challenge']);
-    console.log(url);
 })
 
 module.exports = routes;
