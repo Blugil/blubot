@@ -23,15 +23,13 @@ stream.get('/', function(request, response) {
 //processes when an update happens on the subscription and processes it
 stream.post('/', function(request, response) {
     console.log('there was a POST request')
-    if (request.headers['twitch-notification-id'] == " ") {
-        //TODO: ACTUALLY SET UP DUPLICATE SYSTEM
+    if (request.headers['twitch-notification-id'] == bot.getPreviousNotification()) {
+        bot.setPreviousNotification(request.headers['twitch-notification-id']);
         reseponse.sendStatus(409);
     }
     else {
-        previousNotification = request.headers['twitch-notification-id']
         data = request.body.data;
-        console.log(data.length);
-        
+
         //tells the twitch bot to disconnect from the chat when the streamstate changes to null (stream offline)
         if (data.length == 0) {
             //checks if bot is connected before disconnecting
@@ -58,6 +56,7 @@ stream.post('/', function(request, response) {
                 }   
             }
         }
+        bot.setPreviousNotification(request.headers['twitch-notification-id']);
         response.sendStatus(200);
     } 
 })

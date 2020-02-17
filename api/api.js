@@ -32,8 +32,6 @@ function getSubscriptionsList() {
 
 }
 
-
-
 /* 
     generic function for making any subscription request
     @param callback - the api which twitch will be making a GET request to to ensure the service works
@@ -61,11 +59,10 @@ function subscriptionRequest(callback, mode, topic, lease_seconds) {
     })
 }
 
-
-getSubscriptionsList();
+// getSubscriptionsList();
 
 // subscription quest to new followers
-//subscriptionRequest(callback + "followers", 'subscribe', `https://api.twitch.tv/helix/users/follows?first=1&to_id=${user_id}`, 100000);
+subscriptionRequest(callback + "followers", 'subscribe', `https://api.twitch.tv/helix/users/follows?first=1&to_id=${user_id}`, 100000);
 
 // subscription request to change in stream state
-//subscriptionRequest(callback + "stream", 'subscribe', `https://api.twitch.tv/helix/streams?user_id=${user_id}`, 100000);
+subscriptionRequest(callback + "stream", 'subscribe', `https://api.twitch.tv/helix/streams?user_id=${user_id}`, 100000);

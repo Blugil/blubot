@@ -10,6 +10,7 @@ class Bot {
         this.axios = axios;
         this.streamData = "";
         this.client_id = clientID;
+        this.previousNotification = "";
     }
 
     clientConnected(client, axios, address, port) {
@@ -70,8 +71,12 @@ class Bot {
         client.action('blugil', 'Hi! The current working commands are: ...there are none it would seem')
     }
 
-    get test() {
-        return("bot instanced successfully")
+    getPreviousNotification() {
+        return this.previousNotification;
+    }
+
+    setPreviousNotification(notification) {
+        this.previousNotification = notification;
     }
     
     //does not work, error: functions not defined within the scope

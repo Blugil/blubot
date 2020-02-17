@@ -16,5 +16,5 @@ app.listen(8080, function() {
 //console.log('server is running');
 
 //all the bot stuff
-client.on('message', bot.messageHandler)
-bot.connect(client)
+client.on('message', bot.messageHandler);
+bot.connect(client);
