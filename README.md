@@ -16,9 +16,10 @@ If desired, one would set up the project like this:
 2. Clone this project using the following steps:
 
 ```Bash
-
+//clone the project
 git clone https://github.com/Blugil/blubot.git
 
+//cd to the project directory
 cd blubot
 
 //install dependencies
