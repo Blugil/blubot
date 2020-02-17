@@ -12,7 +12,7 @@
             "password": ""
         },
         "channels": [
-            ""
+            "your_channel_name_"
         ]
     },
     "project_keys": {
@@ -24,13 +24,13 @@
         "config_id": "development",
         "port": 8080,
         "database": "twitch-bot-db-dev",
-        "callback": ""
+        "callback": "http://yourlinkhere.com"
 
     },
     "production": {
         "config_id": "production",
         "port": 8080,
         "database": "twitch-bot-db-dev",
-        "callback": ""
+        "callback": "http://yourlinkhere.com"
     }
 }
