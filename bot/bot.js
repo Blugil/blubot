@@ -98,7 +98,7 @@ class Bot {
         }
         if (command === '!help') {
             try {
-                this.help(client)
+                client.action('blugil', 'Hi! The current working commands are: ...there are none it would seem')
             } catch (error) {
                 console.error(error)
             }
