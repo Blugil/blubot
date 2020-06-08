@@ -34,7 +34,7 @@ function getSubscriptionsList() {
 
 /**
     generic function for making any subscription request, now compliant with no OAuth requirements instilled 5/1/2020
-    @param callback - the api which twitch will be making a GET request to to ensure the service works
+    @param callback - the api which twitch will be making a GET request to to ensure the service works, formated as "url + /directory"
     @param mode - subscribe/unsubscribe to the subscription
     @param topic - the information (link) being subscribed to
     @param lease_seconds - how long the subscription will last in miliseconds, up to 864,000,000ms
