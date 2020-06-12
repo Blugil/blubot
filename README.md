@@ -1,6 +1,6 @@
 # About
 
-BluBot is a Twitch chatbot that I'm developing for use during my streams. While not fully capable I will slowly be working on this project over time and giving it more fun, exciting, and intereactive features. While the bot will continuously be updated as I come up with new ideas and impliment new features you cna track the current progress by clicking [here](https://trello.com/b/SGyEYo5u/blubot).
+BluBot is a Twitch chatbot that I'm developing for use during my streams. While not fully capable I will slowly be working on this project over time and giving it more fun, exciting, and intereactive features. While the bot will continuously be updated as I come up with new ideas and impliment new features you can track the current progress by clicking [here](https://trello.com/b/SGyEYo5u/blubot).
 
 ## Installation
 
